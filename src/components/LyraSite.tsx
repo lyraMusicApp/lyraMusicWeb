@@ -360,48 +360,13 @@ export function LyraSite() {
 
       </section>
 
-      {/* FOOTER — video-textured wordmark */}
+      {/* FOOTER */}
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
-        <Reveal className="mx-auto max-w-3xl">
-          <svg
-            viewBox="0 0 1000 140"
-            className="mx-auto h-auto w-full max-w-[140px] sm:max-w-[160px]"
-            preserveAspectRatio="xMidYMid meet"
-            aria-label="@ 2026 lyra music"
-          >
-            <defs>
-              <clipPath id="lyra-text-clip">
-                <text
-                  x="500"
-                  y="70"
-                  textAnchor="middle"
-                  dominantBaseline="central"
-                  fontFamily="Inter, ui-sans-serif, system-ui"
-                  fontWeight="900"
-                  fontSize="110"
-                  letterSpacing="-2"
-                  textLength="940"
-                  lengthAdjust="spacingAndGlyphs"
-                >
-                  @ 2026 LYRA MUSIC
-                </text>
-              </clipPath>
-            </defs>
-            <foreignObject width="1000" height="140" clipPath="url(#lyra-text-clip)">
-              <video
-                src={VIDEO}
-                autoPlay
-                loop
-                muted
-                playsInline
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-              />
-            </foreignObject>
-          </svg>
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <p className="text-sm text-white/60">@ 2026 lyra music</p>
         </Reveal>
-
-
       </footer>
+
 
 
 
