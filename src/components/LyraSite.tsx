@@ -107,9 +107,9 @@ export function LyraSite() {
           muted
           loop
           playsInline
-          className="absolute inset-0 z-0 h-[130%] w-full object-cover will-change-transform"
-          style={{ transform: `translate3d(0, ${scrollY * 0.45}px, 0) scale(${1 + Math.min(scrollY / 3000, 0.15)})` }}
+          className="absolute inset-0 z-0 h-full w-full object-cover"
         />
+
 
 
 
