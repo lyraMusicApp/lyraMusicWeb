@@ -67,6 +67,14 @@ const NAV_LINKS = [
 
 export function LyraSite() {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
 
   useEffect(() => {
     const sections = NAV_LINKS.map((l) => document.getElementById(l.id)).filter(
@@ -98,8 +106,10 @@ export function LyraSite() {
           muted
           loop
           playsInline
-          className="absolute inset-0 z-0 h-full w-full object-cover"
+          className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-1000 ease-out will-change-transform"
+          style={{ transform: `translateY(${Math.min(scrollY * 0.3, 200)}px) scale(${1 + Math.min(scrollY / 4000, 0.1)})` }}
         />
+
 
         <div className="relative z-10 flex min-h-screen w-full flex-col">
           {/* HERO PANEL */}
@@ -343,7 +353,7 @@ export function LyraSite() {
 
       {/* FOOTER — video-textured wordmark */}
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
-        <div className="mx-auto max-w-3xl">
+        <Reveal className="mx-auto max-w-3xl">
           <svg
             viewBox="0 0 1000 140"
             className="mx-auto h-auto w-full max-w-[140px] sm:max-w-[160px]"
@@ -379,7 +389,8 @@ export function LyraSite() {
               />
             </foreignObject>
           </svg>
-        </div>
+        </Reveal>
+
 
       </footer>
 
