@@ -363,8 +363,11 @@ export function LyraSite() {
       {/* FOOTER */}
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
         <Reveal className="mx-auto max-w-3xl text-center">
-          <p className="text-sm text-white/60">@ 2026 lyra music</p>
+          <p className="text-sm tracking-widest text-white/60 transition-all duration-700 hover:tracking-[0.3em] hover:text-white">
+            @ 2026 lyra music
+          </p>
         </Reveal>
+
       </footer>
 
 
