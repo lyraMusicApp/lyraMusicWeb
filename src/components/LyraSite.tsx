@@ -98,8 +98,10 @@ export function LyraSite() {
           muted
           loop
           playsInline
-          className="absolute inset-0 z-0 h-full w-full object-cover"
+          className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-1000 ease-out will-change-transform"
+          style={{ transform: `translateY(${Math.min(scrollY * 0.3, 200)}px) scale(${1 + Math.min(scrollY / 4000, 0.1)})` }}
         />
+
 
         <div className="relative z-10 flex min-h-screen w-full flex-col">
           {/* HERO PANEL */}
