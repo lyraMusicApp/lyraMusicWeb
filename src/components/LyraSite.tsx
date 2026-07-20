@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "./Reveal";
+import { Parallax } from "./Parallax";
 
 const VIDEO = "https://files.catbox.moe/127kmb.mp4";
 
