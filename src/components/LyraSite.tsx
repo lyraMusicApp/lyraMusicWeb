@@ -107,12 +107,13 @@ export function LyraSite() {
             <div className="relative flex w-full flex-col p-5 sm:p-8 lg:p-12">
               {/* Nav */}
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Logo size={32} />
-                  <span className="text-xl font-semibold tracking-tighter text-white sm:text-2xl">
+                <div className="flex items-center gap-1.5">
+                  <Logo size={22} />
+                  <span className="text-sm font-semibold tracking-tighter text-white sm:text-base">
                     lyra
                   </span>
                 </div>
+
                 <nav className="liquid-glass hidden items-center gap-1 rounded-full px-2 py-1.5 text-sm text-white/70 md:flex">
                   {NAV_LINKS.map((l) => {
                     const active = activeSection === l.id;
