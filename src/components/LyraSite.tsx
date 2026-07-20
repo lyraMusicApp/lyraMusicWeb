@@ -340,10 +340,10 @@ export function LyraSite() {
 
       {/* FOOTER — video-textured wordmark */}
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-3xl">
           <svg
             viewBox="0 0 1000 160"
-            className="h-auto w-full"
+            className="mx-auto h-auto w-full max-w-xl"
             preserveAspectRatio="xMidYMid meet"
             aria-label="@ 2026 lyra music"
           >
