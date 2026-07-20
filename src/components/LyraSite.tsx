@@ -67,6 +67,14 @@ const NAV_LINKS = [
 
 export function LyraSite() {
   const [activeSection, setActiveSection] = useState<string>("");
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
 
   useEffect(() => {
     const sections = NAV_LINKS.map((l) => document.getElementById(l.id)).filter(
