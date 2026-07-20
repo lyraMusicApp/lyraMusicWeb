@@ -27,10 +27,11 @@ import { Reveal } from "./Reveal";
 const VIDEO =
   "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4";
 
+// Always resolves to the newest release APK the developer publishes on GitHub
 const APK_URL =
-  "https://github.com/shnwazdeveloper/lyra-music/releases/download/lyra-v3.0.1/Lyra-Music.apk";
-const REPO_URL = "https://github.com/shnwazdeveloper/lyra-music";
-const RELEASES_URL = "https://github.com/shnwazdeveloper/lyra-music/releases/latest";
+  "https://github.com/shnwazdeveloper/lyraMusic/releases/latest/download/Lyra-Music.apk";
+const REPO_URL = "https://github.com/shnwazdeveloper/lyraMusic";
+const RELEASES_URL = "https://github.com/shnwazdeveloper/lyraMusic/releases/latest";
 
 const features = [
   { Icon: Search, title: "Universal Search", desc: "Find songs, videos, albums, and playlists in one place." },
@@ -45,7 +46,7 @@ const stats = [
   { k: "100%", v: "Open source" },
   { k: "0", v: "Ads, ever" },
   { k: "6.0+", v: "Android" },
-  { k: "v3.0.1", v: "Latest release" },
+  { k: "Latest", v: "Auto-updated release" },
 ];
 
 function Logo({ size = 32 }: { size?: number }) {
