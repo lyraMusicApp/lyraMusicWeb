@@ -340,25 +340,11 @@ export function LyraSite() {
 
       {/* FOOTER */}
       <footer className="border-t border-white/10 bg-black px-5 py-10 sm:px-8">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-xs text-white/40 sm:flex-row">
-          <div className="flex items-center gap-2">
-            <Logo size={24} />
-            <span className="font-medium tracking-tight text-white/70">lyra music</span>
-          </div>
-          <p>© {new Date().getFullYear()} Lyra Music · Open source · Based on OpenTune</p>
-          <div className="flex items-center gap-3">
-            <a href={REPO_URL} target="_blank" rel="noreferrer" className="hover:text-white">
-              <Github className="h-4 w-4" />
-            </a>
-            <a href="https://twitter.com/shnwazdev" target="_blank" rel="noreferrer" aria-label="Twitter" className="hover:text-white">
-              <Twitter className="h-4 w-4" />
-            </a>
-            <a href="https://instagram.com/sexyshnwaz" target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-white">
-              <Instagram className="h-4 w-4" />
-            </a>
-          </div>
+        <div className="mx-auto max-w-6xl text-center text-xs text-white/50">
+          @ 2026 lyra music
         </div>
       </footer>
+
     </main>
   );
 }
