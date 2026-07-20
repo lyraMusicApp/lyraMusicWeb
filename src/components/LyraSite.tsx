@@ -107,9 +107,9 @@ export function LyraSite() {
           muted
           loop
           playsInline
-          className="absolute inset-0 z-0 h-[130%] w-full object-cover will-change-transform"
-          style={{ transform: `translate3d(0, ${scrollY * 0.45}px, 0) scale(${1 + Math.min(scrollY / 3000, 0.15)})` }}
+          className="absolute inset-0 z-0 h-full w-full object-cover"
         />
+
 
 
 
@@ -166,62 +166,59 @@ export function LyraSite() {
               </div>
 
               {/* Center hero */}
-              <Parallax speed={-0.12}>
-                <div className="flex flex-1 flex-col items-center justify-center py-12 text-center [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
-                  <Logo size={72} />
-                  <h1 className="mt-6 text-balance text-4xl font-medium leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
-                    Your music,{" "}
-                    <em className="font-serif font-medium italic text-white/85">
-                      beautifully
-                    </em>{" "}
-                    reimagined.
-                  </h1>
-                  <p className="mt-5 max-w-xl text-balance text-sm text-white/80 sm:text-base">
-                    Lyra is a free, open-source music player for Android — Material You,
-                    synced lyrics, offline library, and zero ads.
-                  </p>
+              <div className="flex flex-1 flex-col items-center justify-center py-12 text-center [text-shadow:0_2px_24px_rgba(0,0,0,0.55)]">
+                <Logo size={72} />
+                <h1 className="mt-6 text-balance text-4xl font-medium leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+                  Your music,{" "}
+                  <em className="font-serif font-medium italic text-white/85">
+                    beautifully
+                  </em>{" "}
+                  reimagined.
+                </h1>
+                <p className="mt-5 max-w-xl text-balance text-sm text-white/80 sm:text-base">
+                  Lyra is a free, open-source music player for Android — Material You,
+                  synced lyrics, offline library, and zero ads.
+                </p>
 
-                  <a
-                    href={APK_URL}
-                    className="liquid-glass-strong mt-8 inline-flex items-center gap-3 rounded-full px-5 py-3 text-sm text-white transition-transform hover:scale-105 active:scale-95"
-                  >
-                    <span>Download APK</span>
-                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15">
-                      <Download className="h-3.5 w-3.5" />
+                <a
+                  href={APK_URL}
+                  className="liquid-glass-strong mt-8 inline-flex items-center gap-3 rounded-full px-5 py-3 text-sm text-white transition-transform hover:scale-105 active:scale-95"
+                >
+                  <span>Download APK</span>
+                  <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/15">
+                    <Download className="h-3.5 w-3.5" />
+                  </span>
+                </a>
+
+                <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
+                  {["Material You", "Offline Library", "Synced Lyrics"].map((p) => (
+                    <span
+                      key={p}
+                      className="liquid-glass rounded-full px-3 py-1.5 text-[11px] text-white/80 sm:text-xs"
+                    >
+                      {p}
                     </span>
-                  </a>
-
-                  <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
-                    {["Material You", "Offline Library", "Synced Lyrics"].map((p) => (
-                      <span
-                        key={p}
-                        className="liquid-glass rounded-full px-3 py-1.5 text-[11px] text-white/80 sm:text-xs"
-                      >
-                        {p}
-                      </span>
-                    ))}
-                  </div>
+                  ))}
                 </div>
-              </Parallax>
+              </div>
 
               {/* Bottom quote */}
-              <Parallax speed={0.08}>
-                <div className="text-center">
-                  <p className="text-[10px] uppercase tracking-widest text-white/50 sm:text-xs">
-                    Visionary Design
-                  </p>
-                  <p className="mt-2 text-base text-white sm:mt-3 sm:text-2xl">
-                    <span>"We imagined a sound with </span>
-                    <em className="font-serif font-medium italic text-white/80">no ending</em>
-                    <span>."</span>
-                  </p>
-                  <div className="mt-3 flex items-center justify-center gap-3 text-[10px] uppercase tracking-widest text-white/60 sm:text-xs">
-                    <span className="h-px w-8 bg-white/30 sm:w-10" />
-                    Marcus Aurelio
-                    <span className="h-px w-8 bg-white/30 sm:w-10" />
-                  </div>
+              <div className="text-center">
+                <p className="text-[10px] uppercase tracking-widest text-white/50 sm:text-xs">
+                  Visionary Design
+                </p>
+                <p className="mt-2 text-base text-white sm:mt-3 sm:text-2xl">
+                  <span>"We imagined a sound with </span>
+                  <em className="font-serif font-medium italic text-white/80">no ending</em>
+                  <span>."</span>
+                </p>
+                <div className="mt-3 flex items-center justify-center gap-3 text-[10px] uppercase tracking-widest text-white/60 sm:text-xs">
+                  <span className="h-px w-8 bg-white/30 sm:w-10" />
+                  Marcus Aurelio
+                  <span className="h-px w-8 bg-white/30 sm:w-10" />
                 </div>
-              </Parallax>
+              </div>
+
 
             </div>
           </div>
