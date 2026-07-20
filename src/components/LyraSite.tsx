@@ -24,8 +24,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { Reveal } from "./Reveal";
 
-const VIDEO =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260315_073750_51473149-4350-4920-ae24-c8214286f323.mp4";
+const VIDEO = "https://files.catbox.moe/127kmb.mp4";
 
 // Always resolves to the newest release APK the developer publishes on GitHub
 const APK_URL =
