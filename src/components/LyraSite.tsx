@@ -339,11 +339,12 @@ export function LyraSite() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-black px-5 py-10 sm:px-8">
-        <div className="mx-auto max-w-6xl text-center text-xs text-white/50">
+      <footer className="border-t border-white/10 bg-black px-5 py-8 sm:px-8">
+        <div className="mx-auto max-w-6xl text-center text-sm font-medium tracking-wide text-white/70">
           @ 2026 lyra music
         </div>
       </footer>
+
 
     </main>
   );
