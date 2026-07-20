@@ -62,6 +62,7 @@ function Logo({ size = 32 }: { size?: number }) {
 
 const NAV_LINKS = [
   { id: "features", label: "Features" },
+  { id: "preview", label: "Preview" },
   { id: "download", label: "Download" },
 ] as const;
 
