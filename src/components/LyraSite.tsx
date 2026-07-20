@@ -46,7 +46,7 @@ const stats = [
   { k: "100%", v: "Open source" },
   { k: "0", v: "Ads, ever" },
   { k: "6.0+", v: "Android" },
-  { k: "v3.0.1", v: "Latest release" },
+  { k: "Latest", v: "Auto-updated release" },
 ];
 
 function Logo({ size = 32 }: { size?: number }) {
