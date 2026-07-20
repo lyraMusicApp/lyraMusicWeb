@@ -340,49 +340,71 @@ export function LyraSite() {
 
       {/* FOOTER */}
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
-        <div className="mx-auto max-w-6xl text-center">
-          <div className="relative inline-block leading-none">
+        <div className="mx-auto max-w-6xl">
+          <div className="relative mx-auto w-full overflow-hidden" style={{ aspectRatio: "10 / 1.6" }}>
             <video
               src={VIDEO}
               autoPlay
               loop
               muted
               playsInline
-              className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
               style={{
-                WebkitMaskImage:
-                  "linear-gradient(#000,#000), url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22></svg>')",
+                WebkitMaskImage: "url(#lyra-footer-mask)",
+                maskImage: "url(#lyra-footer-mask)",
               }}
             />
-            <h2
+            <svg
+              viewBox="0 0 1000 160"
+              className="relative h-full w-full"
+              preserveAspectRatio="xMidYMid meet"
               aria-label="@ 2026 lyra music"
-              className="relative text-4xl font-black uppercase tracking-tight sm:text-6xl md:text-7xl"
-              style={{
-                backgroundImage: `url(${VIDEO})`,
-                WebkitBackgroundClip: "text",
-                backgroundClip: "text",
-                color: "transparent",
-              }}
             >
-              @ 2026 lyra music
-            </h2>
-            <video
-              src={VIDEO}
-              autoPlay
-              loop
-              muted
-              playsInline
-              aria-hidden
-              className="pointer-events-none absolute inset-0 h-full w-full object-cover mix-blend-lighten"
-              style={{
-                WebkitMaskImage:
-                  "linear-gradient(#000,#000)",
-                WebkitMaskComposite: "source-in",
-              }}
-            />
+              <defs>
+                <mask id="lyra-text-mask">
+                  <rect width="100%" height="100%" fill="black" />
+                  <text
+                    x="50%"
+                    y="50%"
+                    textAnchor="middle"
+                    dominantBaseline="central"
+                    fontFamily="Inter, ui-sans-serif, system-ui"
+                    fontWeight="900"
+                    fontSize="140"
+                    letterSpacing="-4"
+                    fill="white"
+                  >
+                    @ 2026 LYRA MUSIC
+                  </text>
+                </mask>
+              </defs>
+              <foreignObject width="100%" height="100%" mask="url(#lyra-text-mask)">
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    background: "black",
+                  }}
+                >
+                  <video
+                    src={VIDEO}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+              </foreignObject>
+            </svg>
           </div>
         </div>
       </footer>
+
 
 
 
