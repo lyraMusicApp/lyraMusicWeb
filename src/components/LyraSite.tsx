@@ -358,7 +358,8 @@ export function LyraSite() {
               </div>
             </div>
           </Reveal>
-        </div>
+        </Parallax>
+
       </section>
 
       {/* FOOTER — video-textured wordmark */}
