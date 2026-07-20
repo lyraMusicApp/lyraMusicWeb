@@ -343,7 +343,7 @@ export function LyraSite() {
 
       {/* FOOTER — video-textured wordmark */}
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
-        <div className="mx-auto max-w-3xl">
+        <Reveal className="mx-auto max-w-3xl">
           <svg
             viewBox="0 0 1000 140"
             className="mx-auto h-auto w-full max-w-[140px] sm:max-w-[160px]"
@@ -379,7 +379,8 @@ export function LyraSite() {
               />
             </foreignObject>
           </svg>
-        </div>
+        </Reveal>
+
 
       </footer>
 
