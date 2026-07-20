@@ -107,9 +107,10 @@ export function LyraSite() {
           muted
           loop
           playsInline
-          className="absolute inset-0 z-0 h-full w-full object-cover transition-transform duration-1000 ease-out will-change-transform"
-          style={{ transform: `translateY(${Math.min(scrollY * 0.3, 200)}px) scale(${1 + Math.min(scrollY / 4000, 0.1)})` }}
+          className="absolute inset-0 z-0 h-[130%] w-full object-cover will-change-transform"
+          style={{ transform: `translate3d(0, ${scrollY * 0.45}px, 0) scale(${1 + Math.min(scrollY / 3000, 0.15)})` }}
         />
+
 
 
         <div className="relative z-10 flex min-h-screen w-full flex-col">
