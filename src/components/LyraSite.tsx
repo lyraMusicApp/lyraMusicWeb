@@ -338,72 +338,45 @@ export function LyraSite() {
         </div>
       </section>
 
-      {/* FOOTER */}
+      {/* FOOTER — video-textured wordmark */}
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
         <div className="mx-auto max-w-6xl">
-          <div className="relative mx-auto w-full overflow-hidden" style={{ aspectRatio: "10 / 1.6" }}>
-            <video
-              src={VIDEO}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="absolute inset-0 h-full w-full object-cover"
-              style={{
-                WebkitMaskImage: "url(#lyra-footer-mask)",
-                maskImage: "url(#lyra-footer-mask)",
-              }}
-            />
-            <svg
-              viewBox="0 0 1000 160"
-              className="relative h-full w-full"
-              preserveAspectRatio="xMidYMid meet"
-              aria-label="@ 2026 lyra music"
-            >
-              <defs>
-                <mask id="lyra-text-mask">
-                  <rect width="100%" height="100%" fill="black" />
-                  <text
-                    x="50%"
-                    y="50%"
-                    textAnchor="middle"
-                    dominantBaseline="central"
-                    fontFamily="Inter, ui-sans-serif, system-ui"
-                    fontWeight="900"
-                    fontSize="140"
-                    letterSpacing="-4"
-                    fill="white"
-                  >
-                    @ 2026 LYRA MUSIC
-                  </text>
-                </mask>
-              </defs>
-              <foreignObject width="100%" height="100%" mask="url(#lyra-text-mask)">
-                <div
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    background: "black",
-                  }}
+          <svg
+            viewBox="0 0 1000 160"
+            className="h-auto w-full"
+            preserveAspectRatio="xMidYMid meet"
+            aria-label="@ 2026 lyra music"
+          >
+            <defs>
+              <clipPath id="lyra-text-clip">
+                <text
+                  x="50%"
+                  y="50%"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fontFamily="Inter, ui-sans-serif, system-ui"
+                  fontWeight="900"
+                  fontSize="130"
+                  letterSpacing="-4"
                 >
-                  <video
-                    src={VIDEO}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
-              </foreignObject>
-            </svg>
-          </div>
+                  @ 2026 LYRA MUSIC
+                </text>
+              </clipPath>
+            </defs>
+            <foreignObject width="100%" height="100%" clipPath="url(#lyra-text-clip)">
+              <video
+                src={VIDEO}
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </foreignObject>
+          </svg>
         </div>
       </footer>
+
 
 
 
