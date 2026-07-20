@@ -62,6 +62,7 @@ function Logo({ size = 32 }: { size?: number }) {
 
 const NAV_LINKS = [
   { id: "features", label: "Features" },
+  { id: "preview", label: "Preview" },
   { id: "download", label: "Download" },
 ] as const;
 
@@ -269,6 +270,50 @@ export function LyraSite() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* PREVIEW / now-playing mock */}
+      <section id="preview" className="scroll-mt-20 bg-black px-5 pb-16 sm:px-8 sm:pb-24">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-2">
+          <Reveal>
+            <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-white/50 sm:text-xs">
+              Now Playing
+            </p>
+            <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl md:text-5xl">
+              Music that follows
+              <br />
+              <em className="font-serif italic text-white/70">your every move.</em>
+            </h2>
+            <p className="mt-4 max-w-md text-sm text-white/60 sm:text-base">
+              Background playback, lockscreen controls, Android Auto, and a Material You
+              palette that adapts to your wallpaper.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href={APK_URL}
+                className="liquid-glass-strong inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm text-white transition-transform hover:scale-105"
+              >
+                <Download className="h-4 w-4" /> Get the APK
+              </a>
+              <a
+                href={RELEASES_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="liquid-glass inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm text-white transition-transform hover:scale-105"
+              >
+                Releases <ChevronRight className="h-4 w-4" />
+              </a>
+            </div>
+          </Reveal>
+
+          {/* Phone mock - playable preview */}
+          <Reveal delay={150}>
+            <Parallax speed={-0.12}>
+              <PhonePreview />
+            </Parallax>
+          </Reveal>
+
         </div>
       </section>
 
