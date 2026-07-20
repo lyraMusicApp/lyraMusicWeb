@@ -465,15 +465,8 @@ function PhonePreview() {
           </div>
           <div className="mt-3 flex items-center justify-between text-[10px] text-white/50">
             <span>{playing ? "0:08" : "0:00"}</span>
-            <a
-              href={SONG.watchUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-white"
-            >
-              Open on YouTube
-            </a>
           </div>
+
 
           <div className="mt-5 flex items-center justify-center gap-5">
             <button
