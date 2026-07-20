@@ -107,14 +107,14 @@ export function LyraSite() {
             <div className="relative flex w-full flex-col p-5 sm:p-8 lg:p-12">
               {/* Nav */}
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-1.5">
-                  <Logo size={22} />
-                  <span className="text-sm font-semibold tracking-tighter text-white sm:text-base">
+                <div className="flex items-center gap-2">
+                  <Logo size={36} />
+                  <span className="text-xl font-semibold tracking-tighter text-black sm:text-2xl">
                     lyra
                   </span>
                 </div>
 
-                <nav className="liquid-glass hidden items-center gap-1 rounded-full px-2 py-1.5 text-sm text-white/70 md:flex">
+                <nav className="liquid-glass hidden items-center gap-1 rounded-full px-2 py-1.5 text-sm text-black/70 md:flex">
                   {NAV_LINKS.map((l) => {
                     const active = activeSection === l.id;
                     return (
@@ -123,16 +123,17 @@ export function LyraSite() {
                         href={`#${l.id}`}
                         className={`rounded-full px-3 py-1.5 transition-all ${
                           active
-                            ? "bg-white/15 text-white"
-                            : "hover:text-white"
+                            ? "bg-black/10 text-black"
+                            : "hover:text-black"
                         }`}
                       >
                         {l.label}
                       </a>
                     );
                   })}
-                  <a href={REPO_URL} target="_blank" rel="noreferrer" className="rounded-full px-3 py-1.5 transition-colors hover:text-white">GitHub</a>
+                  <a href={REPO_URL} target="_blank" rel="noreferrer" className="rounded-full px-3 py-1.5 transition-colors hover:text-black">GitHub</a>
                 </nav>
+
                 <div className="flex items-center gap-2">
                   <a
                     href={REPO_URL}
