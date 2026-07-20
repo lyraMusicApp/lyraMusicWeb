@@ -343,7 +343,7 @@ export function LyraSite() {
         <div className="mx-auto max-w-3xl">
           <svg
             viewBox="0 0 1000 140"
-            className="mx-auto h-auto w-full max-w-[220px] sm:max-w-[260px]"
+            className="mx-auto h-auto w-full max-w-[140px] sm:max-w-[160px]"
             preserveAspectRatio="xMidYMid meet"
             aria-label="@ 2026 lyra music"
           >
