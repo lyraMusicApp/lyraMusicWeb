@@ -309,8 +309,11 @@ export function LyraSite() {
 
           {/* Phone mock - playable preview */}
           <Reveal delay={150}>
-            <PhonePreview />
+            <Parallax speed={-0.12}>
+              <PhonePreview />
+            </Parallax>
           </Reveal>
+
         </div>
       </section>
 
