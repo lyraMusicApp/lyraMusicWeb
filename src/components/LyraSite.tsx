@@ -339,11 +339,51 @@ export function LyraSite() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-white/10 bg-black px-5 py-8 sm:px-8">
-        <div className="mx-auto max-w-6xl text-center text-sm font-medium tracking-wide text-white/70">
-          @ 2026 lyra music
+      <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
+        <div className="mx-auto max-w-6xl text-center">
+          <div className="relative inline-block leading-none">
+            <video
+              src={VIDEO}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(#000,#000), url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22></svg>')",
+              }}
+            />
+            <h2
+              aria-label="@ 2026 lyra music"
+              className="relative text-4xl font-black uppercase tracking-tight sm:text-6xl md:text-7xl"
+              style={{
+                backgroundImage: `url(${VIDEO})`,
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              @ 2026 lyra music
+            </h2>
+            <video
+              src={VIDEO}
+              autoPlay
+              loop
+              muted
+              playsInline
+              aria-hidden
+              className="pointer-events-none absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(#000,#000)",
+                WebkitMaskComposite: "source-in",
+              }}
+            />
+          </div>
         </div>
       </footer>
+
 
 
     </main>
