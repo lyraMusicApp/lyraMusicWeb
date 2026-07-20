@@ -414,11 +414,11 @@ export function LyraSite() {
 }
 
 const SONG = {
-  id: "OMPHhaJFPQo",
-  title: "Baarish Mein Phir",
-  artist: "Saahel",
-  thumb: "https://i.ytimg.com/vi/OMPHhaJFPQo/hqdefault.jpg",
-  watchUrl: "https://youtu.be/OMPHhaJFPQo",
+  id: "1VJ47b9qjkA",
+  title: "Featured Track",
+  artist: "Lyra",
+  thumb: "https://i.ytimg.com/vi/1VJ47b9qjkA/hqdefault.jpg",
+  watchUrl: "https://youtu.be/1VJ47b9qjkA",
 };
 
 function PhonePreview() {
