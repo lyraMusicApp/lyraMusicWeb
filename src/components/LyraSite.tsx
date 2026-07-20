@@ -319,7 +319,7 @@ export function LyraSite() {
 
       {/* DOWNLOAD CTA */}
       <section id="download" className="scroll-mt-20 bg-black px-5 pb-16 sm:px-8 sm:pb-24">
-        <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl">
+        <Parallax speed={-0.08} className="mx-auto max-w-5xl overflow-hidden rounded-3xl">
           <Reveal className="liquid-glass-strong relative rounded-3xl p-8 sm:p-14">
             <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
               <div className="max-w-xl">
