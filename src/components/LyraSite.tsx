@@ -342,28 +342,30 @@ export function LyraSite() {
       <footer className="relative border-t border-white/10 bg-black px-5 py-10 sm:px-8">
         <div className="mx-auto max-w-3xl">
           <svg
-            viewBox="0 0 1000 160"
-            className="mx-auto h-auto w-full max-w-xl"
+            viewBox="0 0 1000 140"
+            className="mx-auto h-auto w-full max-w-md"
             preserveAspectRatio="xMidYMid meet"
             aria-label="@ 2026 lyra music"
           >
             <defs>
               <clipPath id="lyra-text-clip">
                 <text
-                  x="50%"
-                  y="50%"
+                  x="500"
+                  y="70"
                   textAnchor="middle"
                   dominantBaseline="central"
                   fontFamily="Inter, ui-sans-serif, system-ui"
                   fontWeight="900"
-                  fontSize="130"
-                  letterSpacing="-4"
+                  fontSize="110"
+                  letterSpacing="-2"
+                  textLength="940"
+                  lengthAdjust="spacingAndGlyphs"
                 >
                   @ 2026 LYRA MUSIC
                 </text>
               </clipPath>
             </defs>
-            <foreignObject width="100%" height="100%" clipPath="url(#lyra-text-clip)">
+            <foreignObject width="1000" height="140" clipPath="url(#lyra-text-clip)">
               <video
                 src={VIDEO}
                 autoPlay
@@ -375,6 +377,7 @@ export function LyraSite() {
             </foreignObject>
           </svg>
         </div>
+
       </footer>
 
 
