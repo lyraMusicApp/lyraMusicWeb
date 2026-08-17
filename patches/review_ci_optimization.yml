@@ -1,0 +1,10 @@
+# CI Optimization Config
+name: CI Optimization
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+# Reviewed & verified: 2026-08-17T09:40:43.408Z
